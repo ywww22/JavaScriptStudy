@@ -1,0 +1,39 @@
+// submit
+
+<form id="target" action="result.html">
+    <label for="name">name</label> <input id="name" type="name" />
+    <input type="submit" />
+</form>
+<script>
+var t = document.getElementById('target');
+t.addEventListener('submit', function(event){
+    if(document.getElementById('name').value.length === 0){
+        alert('Name 필드의 값이 누락 되었습니다');
+        event.preventDefault();
+    }
+});
+</script>
+
+// change
+
+<p id="result"></p>
+<input id="target" type="name" />
+<script>
+var t = document.getElementById('target');
+t.addEventListener('change', function(event){
+    document.getElementById('result').innerHTML=event.target.value;
+});
+</script>
+
+// blur, focus
+
+<input id="target" type="name" />
+<script>
+var t = document.getElementById('target');
+t.addEventListener('blur', function(event){
+    alert('blur');  
+});
+t.addEventListener('focus', function(event){
+    alert('focus'); 
+});
+</script>

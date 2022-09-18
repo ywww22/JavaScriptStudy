@@ -1,0 +1,16 @@
+$( "#active").find('.marked').css( "background-color", "red" );
+// = $('#active').css('color','blue').find('.marked').css( "background-color", "red" );
+
+/* 실행 결과
+<ul>
+    <li class="marked">html</li>
+    <li>css</li>
+    <li id="active" style="color: blue;">JavaScript
+        <ul>
+            <li>JavaScript Core</li>
+            <li class="marked" style="background-color: red;">DOM</li>
+            <li class="marked" style="background-color: red;">BOM</li>
+        </ul>
+    </li>
+</ul>
+*/
